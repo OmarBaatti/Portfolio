@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSITA Minecraft Data Reader</title>
+    <link rel="shortcut icon" href="img/ssita-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><img src="img/minecraft-icon.png" class="ssita" alt="SSITA"> ScreenShare ITA Minecraft Data Reader</h1>
+        <div class="icons">
+          <a href="https://discord.gg/SSIta" target="_blank"><img src="img/discord-icon.png" alt="Discord"></a>
+          <a href="https://www.youtube.com/@ScreenShareITA" target="_blank"><img src="img/youtube-icon.png" alt="YouTube"></a>
+          <a href="https://github.com/ScreenShareITA" target="_blank"><img src="img/github-icon.png" alt="GitHub"></a>
+        </div>
+      </header>
+    
+      <main>
+        <div class="input-container">
+          <!-- da modificare la regex dopo -->
+          <input list="options" id="input-list" name="inputL" pattern=".*" required placeholder="Usa un dominio o ip Es: play.coralmc.it oppure 178.218.144.226 oppure (specifica la porta) play.coralmc.it:25565">
+          <datalist id="options">
+            <option value="play.coralmc.it">CoralMC</option>
+            <option value="mc.edenmine.eu">EdenMine</option>
+            <option value="mc.hypixel.net">HyPixel</option>
+          </datalist>
+          <button id="refresh-button">Refresh</button>
+        </div>
+    
+        <div id="data-container">
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
