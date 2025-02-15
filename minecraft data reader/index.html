@@ -20,7 +20,7 @@
       <main>
         <div class="input-container">
           <!-- da modificare la regex dopo -->
-          <input list="options" id="input-list" name="inputL" pattern=".*" required placeholder="Usa un dominio o ip Es: play.coralmc.it oppure 178.218.144.226 oppure (specifica la porta) play.coralmc.it:25565">
+          <input list="options" id="input-list" name="inputL" pattern="^(?:(?:[0-9]{1,3}\.){3}[0-9]{1,3}|(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,})(?::[0-9]{1,5})?$" required placeholder="Usa un dominio o ip Es: play.coralmc.it oppure 178.218.144.226 oppure (specifica la porta) play.coralmc.it:25565">
           <datalist id="options">
             <option value="play.coralmc.it">CoralMC</option>
             <option value="mc.edenmine.eu">EdenMine</option>
