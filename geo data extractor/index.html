@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLocator</title>
+    <link rel="shortcut icon" href="favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="geostyle.css">
+</head>
+<body>
+    <div id="scatola">
+        <h1 id="title">Share location info with the site</h1>
+        
+        <!-- Box per i dettagli (data, latitudine, longitudine) -->
+        <div id="detailsBox">
+            <p>Are you having difficulties enabling geolocation services in windows? <a href="https://www.youtube.com/watch?v=MfTVNjEsHjA" target="_blank">Visit this link!</a></p>
+        </div>
+    
+        <hr>
+
+        <div id="mapsContainer">
+            <div id="MapsBox" class="mapBox"></div>
+            <div id="OSMBox" class="mapBox">
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="geoloc.js"></script>
+</body>
+</html>
