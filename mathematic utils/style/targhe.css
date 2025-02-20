@@ -1,0 +1,26 @@
+#targhe img{
+    width: 400px; /* Dimensione della targa */
+}
+#targat{
+    position: absolute;left: 50%;
+    margin-top: 10%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 50px;
+    font-size: 400%;
+    text-align: center;
+    letter-spacing: 3px;
+    background: transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+    outline: none;
+}
+#targan{
+    width: 50%;
+    height: 50px;
+    font-size: 200%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}

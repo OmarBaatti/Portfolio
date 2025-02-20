@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn HTML</title>
+    <base href="https://www.w3schools.com/tags/" target="_blank"> <!-- indica un link di base per la pagina in modo da abbreviare tutti i link messi successivamente -->
+</head>
+<body>
+    <div id="elements-box">
+        <h1>Elementi HTML</h1>
+        
+        <div id="elements">
+
+        </div>
+        <!-- attributi spiegati tutti con title forse -->
+        <div id="css">
+            
+        </div>
+    </div>
+    <script>
+        const elementout=getI("elements");
+        // special: a textarea abbr ruby rt rp
+
+        // old ,'area','article','aside'
+        const elementi=['p','span','pre','address'];
+
+        // meglio strong di b meglio em di i e meglio ins di u meglio del di s
+        const elementic=['strong','b','em','i','u','ins','del','s','mark','small','big','code','kbd','samp','var','cite','q','blockquote','dfn','sup','sub'];
+        const elementi2=['br','hr','img','audio','area'];
+
+        for(let i=1;i<7;i++) elementinsert("h"+i);
+        elementi.forEach(elementinsert);
+        elementic.forEach(elementcinsert);
+
+        function elementinsert(type){
+            const element=document.createElement(type);
+            element.textContent=`<${type}> Questo è un ${type} </${type}>`;
+            elementout.appendChild(element);
+        }
+        function elementcinsert(type){
+            const p=document.createElement('p');
+            const element=document.createElement(type);
+            element.textContent=`<${type}> Questo è un ${type} </${type}>`;
+            p.appendChild(element)
+            elementout.appendChild(p);
+        }
+        function getI(id){
+            return document.getElementById(id);
+        }
+    </script>
+</body>
+</html>
