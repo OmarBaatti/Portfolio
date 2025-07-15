@@ -1,30 +1,539 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - MainPage</title>
+    <title>Portfolio - Homepage</title>
+    <link rel="shortcut icon" href="src/media/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/styles/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-    Work in progress...
-    <h2>Testing links</h2>
-    <ul>
-        <li><a href="fivem data reader">Fivem Data Reader</a></li>
-        <li><a href="minecraft data reader">Minecraft Data Reader</a></li>
-        <li><a href="geo data extractor">Geo Data Extractor</a></li>
-        <li><a href="mathematic utils">Mathematic Utils</a></li>
-        <li><a href="learn html css">Learn HTML CSS</a></li>
-    </ul>
-    <!--
-        altre info per me:
-        pagina https://bluebeamit.github.io/Portfolio/
 
-        comandi git:
-        git add .
-        git commit -m "modifica"
-        git push
+    <header>
+        <a href="Portfolio"><img src="src/media/logo.svg" alt="Logo"></a>
+        <h1>Homepage</h1>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul id="mobileMenu">
+            <li class="active"><a href=".">Home</a></li>
+            <li><a href="portfolio">Portfolio</a></li>
+            <li><a href="about">About Me</a></li>
+            <li><a href="contact">Contacts</a></li>
+            <li class="icon"><a href="https://linkedin.com/in/omar-baatti" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
+        </ul>
+    </header>
 
-        fvm #FF8C42
-    -->
+    
+    <button id="scrollb">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div class="pbody">
+        <!-- Hero Section con bottone centrale -->
+        <!-- Hero Section con bottone centrale -->
+        <section class="hero">
+            <div class="hero-background">
+                <div id="tsparticles"></div>
+            </div>
+            <div class="hero-content">
+                <h2 class="heroh2">Omar Baatti</h2>
+                <p class="tagline">Web Developer & Designer</p>
+                <p>QUESTO PORTFOLIO E IN FASE DI SVILUPPO</p>
+                <a href="Portfolio" class="cta-button">Visita il Portfolio</a>
+            </div>
+        </section>
+
+        <!-- Presentazione personale -->
+        <section class="about-preview">
+            <div class="container">
+                <h2>Chi Sono</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <!-- Inserisci qui la tua foto -->
+                         <div class="profile-photo"><img src="src/media/foto.webp" alt="Omar Baatti"></div>
+                    </div>
+                    <div class="about-text">
+                        <p>Ciao, sono Omar! Sono un appassionato sviluppatore web. Mi piace creare soluzioni digitali intuitive ed eleganti che risolvono problemi reali.</p>
+                        <p>La mia passione per la tecnologia mi spinge a rimanere sempre aggiornato sulle ultime tendenze e tecnologie nel campo dello sviluppo web.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hard Skills -->
+        <!-- Hard Skills -->
+        <section class="skills">
+            <div class="container">
+                <h2>Hard Skills</h2>
+                
+                <!-- Linguaggi di Programmazione -->
+                <div class="skills-category">
+                    <h3>Linguaggi Conosciuti</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span class="skill-name">React</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span class="skill-name">Django</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-golang"></i>
+                            <span class="skill-name">Golang</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-desktop"></i>
+                            <span class="skill-name">Wails</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-php"></i>
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span class="skill-name">MariaDB/MySQL</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span class="skill-name">PowerShell</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-rust"></i>
+                            <span class="skill-name">Rust</span>
+                            <div class="skill-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <!-- MANCANO EMMET BOOTSTRAP Express ecc... -->
+                    </div>
+                </div>
+                
+                <!-- Lingue e Altre Competenze -->
+                <div class="skills-category">
+                    <h3>Lingue e Altre Competenze</h3>
+                    <div class="skills-grid simple">
+                        <div class="skill-item simple">
+                            <i class="fas fa-language"></i>
+                            <span class="skill-name">Italiano</span>
+                            <span class="skill-level">Madrelingua</span>
+                        </div>
+                        <div class="skill-item simple">
+                            <i class="fas fa-flag-usa"></i>
+                            <span class="skill-name">Inglese</span>
+                            <span class="skill-level">C1</span>
+                        </div>
+                        <div class="skill-item simple">
+                            <i class="fas fa-project-diagram"></i>
+                            <span class="skill-name">Progettazione DB</span>
+                            <span class="skill-level">Intermedio</span>
+                        </div>
+                        <div class="skill-item simple">
+                            <i class="fab fa-git-alt"></i>
+                            <span class="skill-name">Git/GitHub</span>
+                            <span class="skill-level">Avanzato</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soft Skills -->
+        <!-- Soft Skills -->
+        <section class="soft-skills">
+            <div class="container">
+                <h2>Soft Skills</h2>
+                <div class="soft-skills-carousel">
+                    <button id="prevSoftSkill" class="carousel-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel" id="softSkillsCarousel">
+                            <div class="soft-skill-card">
+                                <div class="card-content">
+                                    <i class="fas fa-users"></i>
+                                    <h3>Lavoro di squadra</h3>
+                                    <p>Capacità di collaborare efficacemente in team multidisciplinari.</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill-card">
+                                <div class="card-content">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <h3>Problem Solving</h3>
+                                    <p>Approccio analitico e creativo alla risoluzione dei problemi.</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill-card">
+                                <div class="card-content">
+                                    <i class="fas fa-comments"></i>
+                                    <h3>Comunicazione</h3>
+                                    <p>Eccellenti capacità comunicative sia scritte che verbali.</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill-card">
+                                <div class="card-content">
+                                    <i class="fas fa-arrows-rotate"></i>
+                                    <h3>Adattabilità</h3>
+                                    <p>Capacità di adattarsi rapidamente a nuovi ambienti, strumenti e sfide.</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill-card">
+                                <div class="card-content">
+                                    <i class="fas fa-clock"></i>
+                                    <h3>Gestione del tempo</h3>
+                                    <p>Organizzazione efficace delle priorità e rispetto delle scadenze.</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill-card">
+                                <div class="card-content">
+                                    <i class="fas fa-brain"></i>
+                                    <h3>Pensiero critico</h3>
+                                    <p>Analisi approfondita e valutazione obiettiva delle situazioni.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="nextSoftSkill" class="carousel-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Esperienze e Progetti -->
+        <section class="experiences-projects">
+            <div class="container">
+                <h2>Esperienze e Progetti</h2>
+                <div class="projects-grid">
+                    <!-- Esperienza 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="src/media/innovazione-digitale.jpeg" alt="Progetto 1">
+                        </div>
+                        <div class="project-info">
+                            <h3><a href="https://innovazionedigitale.it" target="_blank">Innovazione Digitale</a></h3>
+                            <p>Tirocinio in un azienda informatica nei reparti helpdesk e management e sviluppo e ricerca.</p>
+                            <a href="portfolio#project1" class="project-link">Vedi dettagli</a>
+                        </div>
+                    </div>
+                    <!-- Progetto 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="src/media/pizzeria.png" alt="Progetto 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>E-Commerce Pizzeria</h3>
+                            <p>E-Commerce per una pizzeria con MariaDB, PHP e DHTML.</p>
+                            <a href="portfolio#project1" class="project-link">Vedi dettagli</a>
+                        </div>
+                    </div>
+                    <!-- Progetto 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="src/media/pfanalyzer.png" alt="Progetto 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>PFAnalyzer</h3>
+                            <p>Strumento per analisi forense dei file di prefetching di windows in Golang.</p>
+                            <a href="portfolio#project2" class="project-link">Vedi dettagli</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificazioni e Studi -->
+        <section class="education">
+            <div class="container">
+                <h2>Certificazioni e Studi</h2>
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="education-date">2025 - //</div>
+                        <div class="education-content">
+                            <h3>BSc in Computer Engineering & AI</h3>
+                            <p>
+                                <a href="https://epicode.com/it/" target="_blank">Epicode Institute of technology</a>
+                            </p>
+                            <div class="education-status in-progress">
+                                <a href="#" target="_blank">
+                                    <i class="fas fa-clock"></i>
+                                    In Corso
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-date">2019 - 25</div>
+                        <div class="education-content">
+                            <h3>Diploma in Informatica</h3>
+                            <p>
+                                <a href="https://www.itiscannizzaro.edu.it/" target="_blank">ITIS Stanislao Cannizzaro</a>
+                            </p>
+                            <div class="education-status completed">
+                                <a href="#" target="_blank">
+                                    <i class="fas fa-check-circle"></i>
+                                    Completato
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottoni di navigazione -->
+        <section class="navigation-buttons">
+            <div class="container">
+                <div class="buttons-container">
+                    <a href="about" class="nav-button about-btn">
+                        <i class="fas fa-user"></i>
+                        <span>Scopri di più su di me</span>
+                    </a>
+                    <a href="contact" class="nav-button contact-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contattami</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="contacts">
+            <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <span><a href="mailto:baattiomar@gmail.com">baattiomar@gmail.com</a></span>
+            </div>
+            <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <span>+39 351 732 0672</span>
+            </div>
+            <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span>Italia</span>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Omar Baatti. Tutti i diritti riservati.
+        </div>
+    </footer>
+    
+    <script src="src/scripts/headfoot.js"></script>
+    <script src="src/scripts/homepage.js"></script>
+
+    <!-- TSPARTICLES SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+    <script type="text/javascript">
+        const tscontainer = tsParticles.load("tsparticles", {
+            fpsLimit: 60,
+            fullScreen: {
+                enable: false  // Importante: disabilita la modalità fullscreen
+            },
+            particles: {
+                number: {
+                    value: 1000,
+                },
+                move: {
+                    enable: true,
+                    speed: 0.2,
+                },
+                opacity: {
+                    value: 1,
+                },
+                color: {
+                    value: "#D60076"  // Colore delle particelle
+                },
+                links: {
+                    enable: true,  // Disabilita i link permanenti
+                    distance: 30,
+                    color: "#007aff",
+                    opacity: 0.5,
+                    width: 1
+                },
+                size: {
+                    value: 1,
+                },
+            },
+            interactivity: {
+                events: {
+                    onHover: {
+                        enable: true,
+                        mode: "connect",  // Attiva la modalità connect al passaggio del mouse
+                    },
+                },
+                modes: {
+                    connect: {
+                        distance: 35,  // Raggio di collegamento tra i punti
+                        links: {
+                            opacity: 1,
+                        },
+                        radius: 125  // Raggio intorno al puntatore in cui si collegano i punti
+                    },
+                },
+            },
+        });
+
+        let lastKnownMousePosition = { x: 0, y: 0 };
+        let ticking = false;
+    
+        // Memorizza l'ultima posizione del mouse
+        document.addEventListener('mousemove', function(e) {
+            lastKnownMousePosition.x = e.clientX;
+            lastKnownMousePosition.y = e.clientY;
+        });
+        
+        const canvas = document.querySelector('#tsparticles canvas');
+
+window.addEventListener('scroll', function() {
+    if (!ticking) {
+        window.requestAnimationFrame(function() {
+            const mouseEvent = new MouseEvent('mousemove', {
+                clientX: lastKnownMousePosition.x,
+                clientY: lastKnownMousePosition.y,
+                bubbles: true,
+                cancelable: true,
+            });
+            canvas.dispatchEvent(mouseEvent); // ← Meglio del document
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,360 @@
+:root {
+    /* Colori base */
+    --bg-dark: #121212;
+    --bg-light: #f5f5f5;
+    --text-dark: #333;
+    --text-light: #fff;
+    
+    /* Accenti */
+    --accent-red: #ff3b30;
+    --accent-cyan: #90c0ff;
+    --accent-blue: #007aff;
+    
+    /* Colore distintivo */
+    --light-purple: #ee80c0;
+    --accent-purple: #D60076;
+    
+    /* Sfumature */
+    --gray-100: #f5f5f5;
+    --gray-200: #e5e5e5;
+    --gray-300: #d4d4d4;
+    --gray-400: #a3a3a3;
+    --gray-500: #737373;
+    --gray-600: #525252;
+    --gray-700: #404040;
+    --gray-800: #262626;
+    --gray-900: #171717;
+}
+
+::selection {
+    background-color: var(--bg-dark);
+    color: var(--accent-purple);
+    text-shadow: var(--accent-blue) 0 0 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    caret-color: var(--accent-blue);
+}
+
+html {
+    scroll-behavior: smooth; /* per portfolio dove rimando con # */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-900);
+    border-radius: 10px;
+    border: 2px solid rgba(120, 120, 120, 0.5); /* bordo intorno per "staccarla" */
+    box-shadow: var(--bg-light) 0 0 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: var(--gray-200) 0 0 20px;
+}
+
+header {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(40, 40, 40, 0.8) 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+header img {
+    height: 2.7em;
+    margin: 0 10px;
+    transition: 0.2s ease;
+}
+
+header img:hover {
+    filter: drop-shadow(0 0 2px var(--accent-purple));
+}
+
+header h1 {
+    font-size: 3em;
+    transition: 0.5s ease;
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease;
+}
+
+header h1:hover {
+    filter: drop-shadow(0 0 1px white);
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+header ul li {
+    margin-right: 20px;
+    padding: 10px 20px;
+    font-weight: 600;
+    background: rgba(30, 30, 30, 0.7);
+    border-radius: 5px;
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+}
+
+header ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+header ul li:not(.icon):hover, header ul li.active {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--accent-purple);
+}
+
+header ul li:not(.icon):hover a, header ul li.active a {
+    color: var(--accent-purple);
+}
+
+header ul li:not(.active):not(.icon):hover {
+    box-shadow: var(--accent-purple) 0px 0px 10px;
+}
+
+ul li.icon{
+    background: none;
+}
+
+ul li.icon a {
+    text-decoration: none;
+    color: #0a6bc2; /* Colore effettivo di linkedin */
+    transition: color 0.2s ease;
+}
+
+ul li.icon:hover a {
+    color: var(--accent-blue);
+    filter: drop-shadow(0 0 1px var(--accent-blue));
+}
+
+#scrollb {
+    position: fixed;
+    opacity: 0;
+    transform: translateY(50px);
+    bottom: 20px;
+    right: 20px;
+    transition:    
+        opacity 0.5s ease,
+        transform 0.5s ease,
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+    pointer-events: none;
+    border-radius: 50px;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--accent-purple);
+    color: var(--text-light);
+}
+
+#scrollb.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#scrollb:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: var(--accent-purple) 0px 0px 10px;
+    color: var(--accent-purple);
+}
+
+.pbody {
+    margin-top: 80px;
+    min-height: 60vh;
+}
+
+footer {
+    background: linear-gradient(0deg, rgba(40, 40, 40, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
+    padding: 40px 20px 20px;
+    margin-top: 50px;
+}
+
+footer .contacts {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+footer .contacts a {
+    color: var(--text-light);
+    text-shadow: 0 0 10px var(--light-purple);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer .contacts a:hover {
+    color: var(--accent-purple);
+    text-shadow: 0 0 10px var(--accent-purple);
+}
+
+footer .contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+footer .contact-item i {
+    margin-right: 10px;
+    color: var(--accent-purple);
+    transition: 0.2s ease;
+}
+
+footer .contact-item i:hover {
+    filter: drop-shadow(0 0 1px white);
+}
+
+footer .copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Aggiungi queste regole alla fine del file */
+
+/* Media Query per dispositivi mobili */
+@media screen and (max-width: 768px) {
+    /* Header responsive */
+    header {
+        padding: 10px 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        height: 2.2em;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-right: 0;
+        margin-left: 0;
+    }
+
+    header ul li {
+        margin: 5px;
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    /* Pulsante di scroll più grande per touch */
+    #scrollb {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 16px;
+        font-size: 1.2em;
+    }
+
+    /* Footer responsive */
+    footer {
+        padding: 30px 15px 15px;
+    }
+
+    footer .contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .contact-item {
+        margin: 8px 0;
+    }
+}
+
+/* Media Query per dispositivi molto piccoli */
+@media screen and (max-width: 480px) {
+    /* Header ulteriormente ottimizzato */
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header ul li {
+        padding: 6px 10px;
+        font-size: 0.8em;
+    }
+
+    /* Menu hamburger SOLO per schermi molto piccoli */
+    .menu-toggle {
+        display: none; /* Nascosto di default */
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 1.5em;
+        color: var(--text-light);
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    /* Mostra il menu hamburger SOLO su schermi piccoli */
+    @media screen and (max-width: 480px) {
+        .menu-toggle {
+            display: block;
+        }
+        
+        header ul {
+            display: none; /* Nascondi il menu normale su mobile */
+        }
+        
+        header ul.mobile-visible {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        header ul.mobile-visible li {
+            margin: 5px 15px;
+            width: calc(100% - 30px);
+            text-align: center;
+        }
+    }
+}
